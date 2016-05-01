@@ -8,6 +8,7 @@ class Config(object):
     TESTING = False
     SECRET_KEY = os.environ.get('SECRET_KEY',
                                 '51f52814-0071-11e6-a247-000ec6c2372c')
+    MAX_CONTENT_LENGTH = 1024 * 1024
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         'DATABASE_URL', 'sqlite:///' + os.path.join(basedir, 'db.sqlite'))
     SQLALCHEMY_TRACK_MODIFICATIONS = False
